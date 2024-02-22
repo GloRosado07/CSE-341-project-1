@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 const mongodb = require('./data/database');
 const usersRouter = require('./routes/users');
 
-app.use('/users', usersRouter);
+app.use('/contacts', usersRouter);
 
 mongodb.initDb((err) => {
     if (err) {
