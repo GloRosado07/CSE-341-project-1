@@ -3,9 +3,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const mongodb = require('./data/database');
-const usersRouter = require('./routes/routers');
+const usersRouter = require('./routes/users');
 
-app.use('/users', usersRouter); // Assuming you want users endpoints under /users
+app.use('/users', usersRouter);
 
 mongodb.initDb((err) => {
     if (err) {
